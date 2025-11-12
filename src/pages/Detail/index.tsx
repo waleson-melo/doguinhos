@@ -31,7 +31,7 @@ export default function FilhoteDetalhes() {
   }
 
   const mensagem = encodeURIComponent(
-    `Olá! Tenho interesse em adotar ${nome ? `a ${nome}` : "este filhote"}.`
+    `Olá! Tenho interesse em adotar ${nome ? `o ${nome}` : "este filhote"}.`
   );
 
   const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
@@ -39,7 +39,9 @@ export default function FilhoteDetalhes() {
   return (
     <div className="min-h-screen bg-linear-to-b from-yellow-50 to-white py-10 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-yellow-700 mb-6">{nome}</h1>
+        <h1 className="text-4xl font-bold text-yellow-700 mb-6">
+          {nome?.replace("_", " ")}
+        </h1>
         <p className="text-lg text-gray-700 mb-4">{dados.descricao}</p>
 
         {/* Carrossel de fotos */}

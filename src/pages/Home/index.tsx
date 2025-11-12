@@ -21,7 +21,7 @@ export default function AdocaoPage() {
 
   const gerarLinkWhatsApp = (nome: string) => {
     const mensagem = encodeURIComponent(
-      `Olá! Tenho interesse em adotar a ${nome}.`
+      `Olá! Tenho interesse em adotar o ${nome}.`
     );
     return `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
   };
@@ -112,7 +112,7 @@ export default function AdocaoPage() {
                     className="w-64 h-64 object-cover rounded-2xl shadow-md mb-4"
                   />
                   <h3 className="text-xl font-semibold text-yellow-800">
-                    {nome}
+                    {nome.replace("_", " ")}
                   </h3>
                   <p className="text-gray-600">{dados.descricao}</p>
                 </CarouselItem>
@@ -144,7 +144,7 @@ export default function AdocaoPage() {
                   className="w-48 h-48 object-cover rounded-xl mb-4"
                 />
                 <h3 className="text-xl font-semibold text-yellow-800 mb-2">
-                  {nome}
+                  {nome.replace("_", " ")}
                 </h3>
                 <p className="text-gray-600 mb-4">{dados.descricao}</p>
 
