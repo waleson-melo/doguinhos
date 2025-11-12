@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/doguinhos">
       <AppRoutes />
     </BrowserRouter>
   );
