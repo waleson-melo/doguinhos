@@ -46,21 +46,25 @@ export default function FilhoteDetalhes() {
 
         {/* Carrossel de fotos */}
         <div className="mb-8">
-          <Carousel>
-            <CarouselContent>
-              {dados.fotos.map((foto, i) => (
-                <CarouselItem key={i} className="flex justify-center">
-                  <img
-                    src={foto}
-                    alt={`${nome} ${i + 1}`}
-                    className="w-80 h-80 object-cover rounded-2xl shadow-md"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <div className="relative max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {dados.fotos.map((foto, i) => (
+                  <CarouselItem key={i} className="flex justify-center">
+                    <img
+                      src={foto}
+                      alt={`${nome} ${i + 1}`}
+                      className="w-80 h-80 object-cover rounded-2xl shadow-md"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              {/* Botões de navegação fixos nas bordas */}
+              <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow rounded-full z-10" />
+              <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow rounded-full z-10" />
+            </Carousel>
+          </div>
         </div>
 
         <p className="text-gray-700 italic mb-2">🐶 {dados.curiosidade}</p>
