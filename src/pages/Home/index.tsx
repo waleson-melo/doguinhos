@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
 import { Link } from "react-router";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { MarsIcon, Menu } from "lucide-react";
 import { useState } from "react";
 
 import ImgDogs from "@/utils/imageDogs";
@@ -29,7 +29,7 @@ export default function AdocaoPage() {
   return (
     <div className="flex flex-col min-h-screen bg-linear-to-b from-yellow-50 to-white text-gray-800">
       {/* Header */}
-      <header className="flex justify-between items-center p-6 shadow-md bg-white sticky top-0 z-50">
+      <header className="flex justify-between items-center p-5 shadow-md bg-white sticky top-0 z-50">
         <h1 className="text-2xl font-bold text-yellow-700">
           Filhotes do Tiryon & Sansa
         </h1>
@@ -85,7 +85,7 @@ export default function AdocaoPage() {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="flex flex-col items-center justify-center text-center py-20 px-6"
+        className="flex flex-col items-center justify-center text-center py-20 px-6 bg-yellow-100"
       >
         <h2 className="text-4xl font-bold mb-4">
           🐾 Encontre seu novo melhor amigo!
@@ -98,10 +98,10 @@ export default function AdocaoPage() {
       </section>
 
       {/* Carousel */}
+      {/*
       <section id="filhotes" className="py-10 bg-yellow-100">
         <div className="max-w-4xl mx-auto relative">
           {" "}
-          {/* <= adiciona 'relative' */}
           <Carousel className="w-full">
             <CarouselContent>
               {Object.entries(doguinhos).map(([nome, dados]) => (
@@ -118,13 +118,12 @@ export default function AdocaoPage() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-
-            {/* Botões agora ficam bem posicionados */}
             <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow rounded-full" />
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow rounded-full" />
           </Carousel>
         </div>
       </section>
+      */}
 
       {/* Cards Individuais */}
       <section className="py-16 px-6 text-center">
@@ -146,7 +145,13 @@ export default function AdocaoPage() {
                 <h3 className="text-xl font-semibold text-yellow-800 mb-2">
                   {nome.replace("_", " ")}
                 </h3>
-                <p className="text-gray-600 mb-4">{dados.descricao}</p>
+                <p className="text-gray-600 mb-2">{dados.descricao}</p>
+                <MarsIcon
+                  color={dados.sexo === 1 ? "#42a7f5" : "pink"}
+                  strokeWidth="3"
+                  size={40}
+                  className="mb-2"
+                />
 
                 {dados.adotado ? (
                   <Button
@@ -194,7 +199,7 @@ export default function AdocaoPage() {
           <img
             src={ImgDogs.imgTyrionSansa}
             alt="Tyrion e Sansa"
-            className="w-64 h-64 object-cover rounded-2xl shadow-md mt-4"
+            className="w-72 h-72 object-cover rounded-2xl shadow-md mt-4"
           />
         </div>
       </section>

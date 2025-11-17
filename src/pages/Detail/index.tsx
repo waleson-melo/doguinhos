@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router";
+import { useParams, Link, useNavigate } from "react-router";
 import {
   Carousel,
   CarouselContent,
@@ -9,10 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 
 import { doguinhos } from "@/data/doguinhos";
+import { MarsIcon } from "lucide-react";
 
 export default function FilhoteDetalhes() {
   const { nome } = useParams();
   const numeroWhatsApp = "5592992646326";
+  const navigate = useNavigate();
 
   const dados = nome ? doguinhos[nome as keyof typeof doguinhos] : undefined;
   if (!dados) {
@@ -42,7 +44,6 @@ export default function FilhoteDetalhes() {
         <h1 className="text-4xl font-bold text-yellow-700 mb-6">
           {nome?.replace("_", " ")}
         </h1>
-        <p className="text-lg text-gray-700 mb-4">{dados.descricao}</p>
 
         {/* Carrossel de fotos */}
         <div className="mb-8">
@@ -67,8 +68,17 @@ export default function FilhoteDetalhes() {
           </div>
         </div>
 
-        <p className="text-gray-700 italic mb-2">🐶 {dados.curiosidade}</p>
-        <p className="text-gray-700 italic mb-8">⭐ 17/10/2025</p>
+        <p className="text-gray-700 italic mb-2">⭐ 17/10/2025</p>
+        <p className="text-lg text-gray-700 mb-4">{dados.descricao}</p>
+        {/* <p className="text-gray-700 italic mb-2">{dados.curiosidade}</p> */}
+        <div className="flex justify-center mb-5">
+          <MarsIcon
+            color={dados.sexo === 1 ? "#42a7f5" : "pink"}
+            strokeWidth="3"
+            size={40}
+            className="mb-2"
+          />
+        </div>
 
         <div className="flex justify-center space-x-4">
           {dados.adotado ? (
@@ -85,11 +95,13 @@ export default function FilhoteDetalhes() {
               </Button>
             </a>
           )}
-          <Link to="/">
-            <Button variant="outline" className="rounded-xl">
-              Voltar
-            </Button>
-          </Link>
+          <Button
+            variant="outline"
+            className="rounded-xl"
+            onClick={() => navigate(-1)}
+          >
+            Voltar
+          </Button>
         </div>
       </div>
     </div>
