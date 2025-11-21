@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 // } from "@/components/ui/carousel";
 import { Link } from "react-router";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MarsIcon, Menu } from "lucide-react";
+import { MarsIcon, Menu, VenusIcon } from "lucide-react";
 import { useState } from "react";
 
 import ImgDogs from "@/utils/imageDogs";
@@ -146,12 +146,21 @@ export default function AdocaoPage() {
                   {nome.replace("_", " ")}
                 </h3>
                 <p className="text-gray-600 mb-2">{dados.descricao}</p>
-                <MarsIcon
-                  color={dados.sexo === 1 ? "#42a7f5" : "pink"}
-                  strokeWidth="3"
-                  size={40}
-                  className="mb-2"
-                />
+                {dados.sexo === 1 ? (
+                  <MarsIcon
+                    color="#42a7f5"
+                    strokeWidth="3"
+                    size={40}
+                    className="mb-2"
+                  />
+                ) : (
+                  <VenusIcon
+                    color="pink"
+                    strokeWidth="3"
+                    size={40}
+                    className="mb-2"
+                  />
+                )}
 
                 {dados.adotado ? (
                   <Button
