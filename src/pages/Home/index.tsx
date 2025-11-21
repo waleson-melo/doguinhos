@@ -198,7 +198,7 @@ export default function AdocaoPage() {
           Sobre os Pais
         </h2>
         <p className="max-w-3xl mx-auto text-gray-700">
-          <strong>Tiryon</strong> é um companheiro brincalhão e protetor, sempre
+          <strong>Tyrion</strong> é um companheiro brincalhão e protetor, sempre
           atento e muito carinhoso. <br />
           <strong>Sansa</strong> é doce, inteligente e adora cuidar dos pequenos
           — uma verdadeira mãezona! Juntos, eles tiveram uma ninhada linda e
