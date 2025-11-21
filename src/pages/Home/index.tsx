@@ -31,7 +31,7 @@ export default function AdocaoPage() {
       {/* Header */}
       <header className="flex justify-between items-center p-5 shadow-md bg-white sticky top-0 z-50">
         <h1 className="text-2xl font-bold text-yellow-700">
-          Filhotes do Tiryon & Sansa
+          Filhotes do Tyrion & Sansa
         </h1>
         <nav className="hidden md:flex space-x-6">
           <a href="#inicio" className="hover:text-yellow-700">
@@ -91,7 +91,7 @@ export default function AdocaoPage() {
           🐾 Encontre seu novo melhor amigo!
         </h2>
         <p className="max-w-2xl text-lg text-gray-600">
-          Conheça os filhotes do Tiryon e da Sansa — uma turma cheia de energia,
+          Conheça os filhotes do Tyrion e da Sansa — uma turma cheia de energia,
           carinho e personalidades únicas, prontos para fazer parte da sua
           família.
         </p>
