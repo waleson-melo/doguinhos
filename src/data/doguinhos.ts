@@ -24,7 +24,7 @@ export const doguinhos = {
     imagem: ImgDogs.Dog3_1,
     fotos: [ImgDogs.Dog3_1, ImgDogs.Dog3_2, ImgDogs.Dog3_3],
     sexo: 1,
-    adotado: false,
+    adotado: true,
   },
   Filhote_4: {
     descricao: "Aceita ser meu humano favorito?",
