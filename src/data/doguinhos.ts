@@ -46,7 +46,7 @@ export const doguinhos = {
       ImgDogs.Dog5_5,
     ],
     sexo: 1,
-    adotado: false,
+    adotado: true,
   },
   Filhote_6: {
     descricao:
