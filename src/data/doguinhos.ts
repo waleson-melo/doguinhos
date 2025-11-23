@@ -49,7 +49,8 @@ export const doguinhos = {
     adotado: false,
   },
   Filhote_6: {
-    descricao: "Sou pequenino agora, mas o amor que eu sinto por você vai ser gigante.",
+    descricao:
+      "Sou pequenino agora, mas o amor que eu sinto por você vai ser gigante.",
     curiosidade: "Sempre tenta dormir no colo de quem estiver por perto.",
     imagem: ImgDogs.Dog6_1,
     fotos: [ImgDogs.Dog6_1, ImgDogs.Dog6_2, ImgDogs.Dog6_3, ImgDogs.Dog6_4],
@@ -57,11 +58,12 @@ export const doguinhos = {
     adotado: false,
   },
   Filhote_7: {
-    descricao: "Levo felicidade por onde passo. Posso levar pra sua casa também?",
+    descricao:
+      "Levo felicidade por onde passo. Posso levar pra sua casa também?",
     curiosidade: "Sempre tenta dormir no colo de quem estiver por perto.",
     imagem: ImgDogs.Dog7_1,
     fotos: [ImgDogs.Dog7_1, ImgDogs.Dog7_2, ImgDogs.Dog7_3, ImgDogs.Dog7_4],
     sexo: 1,
-    adotado: false,
+    adotado: true,
   },
 };
